@@ -1,0 +1,22 @@
+test_check_reports_crlf_without_writing (test_cli.CliTests.test_check_reports_crlf_without_writing) ... ok
+test_clean_run_leaves_files_untouched_and_reports_scope (test_cli.CliTests.test_clean_run_leaves_files_untouched_and_reports_scope) ... ok
+test_fix_makes_extensionless_script_executable_without_staging (test_cli.CliTests.test_fix_makes_extensionless_script_executable_without_staging) ... ok
+test_fix_refuses_hard_links (test_cli.CliTests.test_fix_refuses_hard_links) ... ok
+test_inherited_git_overrides_cannot_redirect_repository (test_cli.CliTests.test_inherited_git_overrides_cannot_redirect_repository) ... ok
+test_interrupted_write_keeps_original_and_cleans_temporary_files (test_cli.CliTests.test_interrupted_write_keeps_original_and_cleans_temporary_files) ... ok
+test_missing_git_returns_actionable_error (test_cli.CliTests.test_missing_git_returns_actionable_error) ... ok
+test_missing_unreadable_and_nonregular_entries_report_errors_and_continue (test_cli.CliTests.test_missing_unreadable_and_nonregular_entries_report_errors_and_continue) ... ok
+test_non_repository_returns_actionable_error (test_cli.CliTests.test_non_repository_returns_actionable_error) ... ok
+test_nontext_shebang_files_are_refused_without_conversion (test_cli.CliTests.test_nontext_shebang_files_are_refused_without_conversion) ... ok
+test_readonly_files_and_directories_leave_originals_untouched (test_cli.CliTests.test_readonly_files_and_directories_leave_originals_untouched) ... ok
+test_running_from_subdirectory_checks_the_repository_root (test_cli.CliTests.test_running_from_subdirectory_checks_the_repository_root) ... ok
+test_submodule_is_skipped_without_reading_its_files (test_cli.CliTests.test_submodule_is_skipped_without_reading_its_files) ... ok
+test_tracked_symlink_is_skipped_without_touching_target (test_cli.CliTests.test_tracked_symlink_is_skipped_without_touching_target) ... ok
+test_unmerged_index_entry_is_reported_once_and_not_modified (test_cli.CliTests.test_unmerged_index_entry_is_reported_once_and_not_modified) ... ok
+test_unusual_filename_and_mixed_endings_are_handled_byte_faithfully (test_cli.CliTests.test_unusual_filename_and_mixed_endings_are_handled_byte_faithfully) ... ok
+test_working_tree_symlinks_in_any_path_component_are_refused (test_cli.CliTests.test_working_tree_symlinks_in_any_path_component_are_refused) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 1.673s
+
+OK

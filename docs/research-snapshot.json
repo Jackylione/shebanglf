@@ -1,0 +1,89 @@
+{
+  "wsl": {
+    "source": "https://api.github.com/repos/microsoft/WSL/issues/8438",
+    "retrieved_at": "2026-10-09T14:34:48.766288+00:00",
+    "html_url": "https://github.com/microsoft/WSL/issues/8438",
+    "title": "bash script fails with \"/bin/bash: bad interpreter: no such file or directory\"",
+    "created_at": "2022-05-23T20:25:43Z",
+    "updated_at": "2022-05-23T20:37:49Z",
+    "body": "### Version\n\nMicrosoft Windows [Version 10.0.22000.613]\n\n### WSL Version\n\n- [X] WSL 2\n- [ ] WSL 1\n\n### Kernel Version\n\n5.10.16\n\n### Distro Version\n\nUbuntu 20.04\n\n### Other Software\n\n_No response_\n\n### Repro Steps\n\nI just installed Ubuntu from the Microsoft Store and then enabled WSL and rebooted\n\n### Expected Behavior\n\nI would expect to be able to run this script (i can run it fine in git bash)\n\n### Actual Behavior\n\nstevenbrix@poseidon:/mnt/c/dev/browser/core-tools$ ./scripts/core-dev-setup\r\n-bash: ./scripts/core-dev-setup: /bin/bash^M: bad interpreter: No such file or directory\n\n### Diagnostic Logs\n\n_No response_",
+    "author": "stevenbrix"
+  },
+  "wsl-confirmation": {
+    "source": "https://api.github.com/repos/microsoft/WSL/issues/comments/1135115739",
+    "retrieved_at": "2026-10-09T14:34:50.058936+00:00",
+    "html_url": "https://github.com/microsoft/WSL/issues/8438#issuecomment-1135115739",
+    "created_at": "2022-05-23T20:37:48Z",
+    "updated_at": "2022-05-23T20:37:48Z",
+    "body": "nvm closing this since the issue is line endings",
+    "author": "stevenbrix"
+  },
+  "sam": {
+    "source": "https://api.github.com/repos/aws/aws-sam-cli/issues/6643",
+    "retrieved_at": "2026-10-09T14:34:48.673455+00:00",
+    "html_url": "https://github.com/aws/aws-sam-cli/issues/6643",
+    "title": "Bug: Windows deploys broken because CRLF not converted to LF for bash/shell scripts",
+    "created_at": "2024-02-03T21:39:01Z",
+    "updated_at": "2024-02-07T02:21:18Z",
+    "body": "<!-- Make sure we don't have an existing Issue that reports the bug you are seeing (both open and closed). \r\nIf you do find an existing Issue, re-open or add a comment to that Issue instead of creating a new one. -->\r\n\r\n### Description:\r\nI use Windows. I found that when pulling down the ```https://github.com/awslabs/aws-lambda-web-adapter``` repo, the LF characters are changed to CRLF (which is default git behaviour on Windows). This caused a problem with ```.sh``` files, since SAM build/deploy does not change CRLF back to LF, and the CRLF causes ```.sh``` scripts to fail. The same issue also occurs for ```bootstrap``` files.\r\n\r\nThis impacts all Windows users unless they take extra steps to convert CRLF to LF. It adds friction to the getting started experience, and is hard to diagnose/fix for Windows users who are not familiar with Linux.\r\n\r\nInstead, this should 'just work', without Windows users having to think about it or do anything. I.e. SAM should convert the CRLF to LF as required.\r\n\r\nSee https://github.com/awslabs/aws-lambda-web-adapter/pull/369 for more info. That PR is a workaround for that repo only; the better fix is for SAM to convert CRLF to LF on Windows, fixing the issue for all repos.\r\n\r\n### Steps to reproduce:\r\n1. Use a Windows client\r\n2. Sync https://github.com/awslabs/aws-lambda-web-adapter/ to your local machine\r\n3. Navigate to the ```./examples/nodejs-zip``` folder\r\n4. Run ```sam build --use-container``` followed by ```sam deploy --guided```\r\n5. Open the deployed application endpoint in your browser\r\n\r\n### Observed result:\r\nBuild and deploy appear to work fine.\r\nWhen you open the application endpoint in your browser, an 'Internal server error' is shown.\r\nExamining the logs, you see the error ```/var/task/run.sh: /bin/bash^M: bad interpreter: No such file or directory```.\r\nAs per https://stackoverflow.com/questions/14219092/bash-script-bin-bashm-bad-interpreter-no-such-file-or-directory this error is caused by CRLF rather than LF in the ```run.sh``` script.\r\n\r\n### Expected result:\r\nThe example should work (and it does work, if you convert the CRLF to LF using a hex editor before you build/deploy).\r\n\r\n### Additional environment details (Ex: Windows, Mac, Amazon Linux etc)\r\nWindows 10\r\n\r\n<!-- Either provide the following info (for AWS SAM CLI v1.68.0 or before) or paste the output of `sam --info` (AWS SAM CLI v1.69.0 or after). -->\r\n\r\n```\r\n{\r\n  \"version\": \"1.108.0\",\r\n  \"system\": {\r\n    \"python\": \"3.11.7\",\r\n    \"os\": \"Windows-10-10.0.19044-SP0\"\r\n  },\r\n  \"additional_dependencies\": {\r\n    \"docker_engine\": \"20.10.8\",\r\n    \"aws_cdk\": \"Not available\",\r\n    \"terraform\": \"Not available\"\r\n  },\r\n  \"available_beta_feature_env_vars\": [\r\n    \"SAM_CLI_BETA_FEATURES\",\r\n    \"SAM_CLI_BETA_BUILD_PERFORMANCE\",\r\n    \"SAM_CLI_BETA_TERRAFORM_SUPPORT\",\r\n    \"SAM_CLI_BETA_RUST_CARGO_LAMBDA\"\r\n  ]\r\n}\r\n```",
+    "author": "jtuliani"
+  },
+  "findsecbugs": {
+    "source": "https://api.github.com/repos/find-sec-bugs/find-sec-bugs/issues/632",
+    "retrieved_at": "2026-10-09T14:34:48.877290+00:00",
+    "html_url": "https://github.com/find-sec-bugs/find-sec-bugs/issues/632",
+    "title": "CLI not working in osX (windows line endings)",
+    "created_at": "2021-05-21T14:03:08Z",
+    "updated_at": "2025-09-08T11:43:45Z",
+    "body": "Hi\r\n\r\nThe CLI tool (findsecuritybugs.sh) is not correctly generated. The line endings are the windows one instead of the unix ones. Therefore, when running it, i have this error\r\n\r\n./findsecbugs.sh: bad interpreter: /bin/bash^M: no such file or directory\r\n\r\nI have edited it replacing the line endings and now it works well\r\n\r\nThanks",
+    "author": "javixeneize"
+  },
+  "wsl-project": {
+    "source": "https://api.github.com/repos/microsoft/WSL",
+    "retrieved_at": "2026-10-09T14:34:49.423614+00:00",
+    "html_url": "https://github.com/microsoft/WSL",
+    "created_at": "2016-04-06T17:32:56Z",
+    "updated_at": "2026-10-09T14:11:57Z",
+    "stargazers_count": 34019
+  },
+  "sam-project": {
+    "source": "https://api.github.com/repos/aws/aws-sam-cli",
+    "retrieved_at": "2026-10-09T14:34:50.706896+00:00",
+    "html_url": "https://github.com/aws/aws-sam-cli",
+    "created_at": "2017-05-23T18:16:23Z",
+    "updated_at": "2026-10-08T18:48:00Z",
+    "stargazers_count": 6735
+  },
+  "findsecbugs-project": {
+    "source": "https://api.github.com/repos/find-sec-bugs/find-sec-bugs",
+    "retrieved_at": "2026-10-09T14:34:49.863599+00:00",
+    "html_url": "https://github.com/find-sec-bugs/find-sec-bugs",
+    "created_at": "2012-05-17T04:07:57Z",
+    "updated_at": "2026-10-05T10:58:21Z",
+    "stargazers_count": 2449
+  },
+  "shellcheck-release": {
+    "source": "https://api.github.com/repos/koalaman/shellcheck/releases/latest",
+    "retrieved_at": "2026-10-09T14:34:50.425355+00:00",
+    "html_url": "https://github.com/koalaman/shellcheck/releases/tag/v0.11.0",
+    "created_at": "2025-08-03T23:21:13Z",
+    "updated_at": "2026-01-05T03:13:00Z",
+    "body": "This release is dedicated to Satisfactory, even though my giant\r\n3D ball of rat's nest conveyor belt spaghetti is anything but.\r\n\r\n  CHANGELOG\r\n\r\n  ## v0.11.0 - 2025-08-03\r\n  ### Added\r\n  - SC2327/SC2328: Warn about capturing the output of redirected commands.\r\n  - SC2329: Warn when (non-escaping) functions are never invoked.\r\n  - SC2330: Warn about unsupported glob matches with [[ .. ]] in BusyBox.\r\n  - SC2331: Suggest using standard -e instead of unary -a in tests.\r\n  - SC2332: Warn about `[ ! -o opt ]` being unconditionally true in Bash.\r\n  - SC3062: Warn about bashism `[ -o opt ]`.\r\n  - Optional `avoid-negated-conditions`: suggest replacing `[ ! a -eq b ]`\r\n    with `[ a -ne b ]`, and similar for -ge/-lt/=/!=/etc (SC2335).\r\n  - Precompiled binaries for Linux riscv64 (linux.riscv64)\r\n\r\n  ### Changed\r\n  - SC2002 about Useless Use Of Cat is now disabled by default. It can be\r\n    re-enabled with `--enable=useless-use-of-cat` or equivalent directive.\r\n  - SC2236/SC2237 about replacing `[ ! -n .. ]` with `[ -z ]` and vice versa\r\n    is now optional under `avoid-negated-conditions`.\r\n  - SC2015 about `A && B || C` no longer triggers when B is a test command.\r\n  - SC3012: Do not warn about `\\<` and `\\>` in test/[] as specified in POSIX.1-2024\r\n  - Diff output now uses / as path separator on Windows\r\n\r\n  ### Fixed\r\n  - SC2218 about function use-before-define is now more accurate.\r\n  - SC2317 about unreachable commands is now less spammy for nested ones.\r\n  - SC2292, optional suggestion for [[ ]], now triggers for Busybox.\r\n  - Updates for Bash 5.3, including `${| cmd; }` and `source -p`\r\n\r\n  ### Removed\r\n  - SC3013: removed since the operators `-ot/-nt/-ef` are specified in POSIX.1-2024",
+    "tag_name": "v0.11.0",
+    "published_at": "2025-08-04T00:27:19Z"
+  },
+  "hooks-release": {
+    "source": "https://api.github.com/repos/pre-commit/pre-commit-hooks/releases/latest",
+    "retrieved_at": "2026-10-09T14:34:50.659964+00:00",
+    "html_url": "https://github.com/pre-commit/pre-commit-hooks/releases/tag/v6.0.0",
+    "created_at": "2025-08-09T19:24:33Z",
+    "updated_at": "2025-08-09T19:31:54Z",
+    "body": "## Fixes\r\n- `check-shebang-scripts-are-executable`: improve error message.\r\n    - #1115 PR by @homebysix.\r\n\r\n## Migrating\r\n- now requires python >= 3.9.\r\n    - #1098 PR by @asottile.\r\n- `file-contents-sorter`: disallow `--unique` and `--ignore-case` at the same\r\n  time.\r\n    - #1095 PR by @nemacysts.\r\n    - #794 issue by @teksturi.\r\n- Removed `check-byte-order-marker` and `fix-encoding-pragma`.\r\n    - `check-byte-order-marker`: migrate to `fix-byte-order-marker`.\r\n    - `fix-encoding-pragma`: migrate to `pyupgrade`.\r\n    - #1034 PR by @mxr.\r\n    - #1032 issue by @mxr.\r\n    - #522 PR by @jgowdy.\r\n\r\n",
+    "tag_name": "v6.0.0",
+    "published_at": "2025-08-09T19:31:54Z"
+  },
+  "shellcheck-rule": {
+    "source": "https://raw.githubusercontent.com/wiki/koalaman/shellcheck/SC1017.md",
+    "error": "The read operation timed out"
+  }
+}

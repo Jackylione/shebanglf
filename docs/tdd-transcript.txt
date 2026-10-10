@@ -1,0 +1,714 @@
+test_check_reports_crlf_without_writing (test_cli.CliTests.test_check_reports_crlf_without_writing) ... FAIL
+
+======================================================================
+FAIL: test_check_reports_crlf_without_writing (test_cli.CliTests.test_check_reports_crlf_without_writing)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ubuntu/codex-worker/projects/devtool-20261009/tests/test_cli.py", line 53, in test_check_reports_crlf_without_writing
+    self.assertEqual(result.returncode, 1, result.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 2 != 1 : /usr/bin/python3: can't open file '/home/ubuntu/codex-worker/projects/devtool-20261009/shebanglf.py': [Errno 2] No such file or directory
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.030s
+
+FAILED (failures=1)
+test_check_reports_crlf_without_writing (test_cli.CliTests.test_check_reports_crlf_without_writing) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.073s
+
+OK
+test_check_reports_crlf_without_writing (test_cli.CliTests.test_check_reports_crlf_without_writing) ... ok
+test_fix_makes_extensionless_script_executable_without_staging (test_cli.CliTests.test_fix_makes_extensionless_script_executable_without_staging) ... FAIL
+
+======================================================================
+FAIL: test_fix_makes_extensionless_script_executable_without_staging (test_cli.CliTests.test_fix_makes_extensionless_script_executable_without_staging)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ubuntu/codex-worker/projects/devtool-20261009/tests/test_cli.py", line 65, in test_fix_makes_extensionless_script_executable_without_staging
+    self.assertEqual(result.returncode, 0, result.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 2 != 0 : usage: shebanglf.py [-h] [repository]
+shebanglf.py: error: unrecognized arguments: --fix
+
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.154s
+
+FAILED (failures=1)
+test_check_reports_crlf_without_writing (test_cli.CliTests.test_check_reports_crlf_without_writing) ... ok
+test_fix_makes_extensionless_script_executable_without_staging (test_cli.CliTests.test_fix_makes_extensionless_script_executable_without_staging) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.152s
+
+OK
+test_check_reports_crlf_without_writing (test_cli.CliTests.test_check_reports_crlf_without_writing) ... ok
+test_clean_run_leaves_files_untouched_and_reports_scope (test_cli.CliTests.test_clean_run_leaves_files_untouched_and_reports_scope) ... FAIL
+test_fix_makes_extensionless_script_executable_without_staging (test_cli.CliTests.test_fix_makes_extensionless_script_executable_without_staging) ... ok
+
+======================================================================
+FAIL: test_clean_run_leaves_files_untouched_and_reports_scope (test_cli.CliTests.test_clean_run_leaves_files_untouched_and_reports_scope)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ubuntu/codex-worker/projects/devtool-20261009/tests/test_cli.py", line 84, in test_clean_run_leaves_files_untouched_and_reports_scope
+    self.assertEqual(result.stdout.strip(), "scripts=1 affected=0 fixed=0 skipped=0 errors=0")
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: '' != 'scripts=1 affected=0 fixed=0 skipped=0 errors=0'
++ scripts=1 affected=0 fixed=0 skipped=0 errors=0
+
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.226s
+
+FAILED (failures=1)
+test_check_reports_crlf_without_writing (test_cli.CliTests.test_check_reports_crlf_without_writing) ... ok
+test_clean_run_leaves_files_untouched_and_reports_scope (test_cli.CliTests.test_clean_run_leaves_files_untouched_and_reports_scope) ... ok
+test_fix_makes_extensionless_script_executable_without_staging (test_cli.CliTests.test_fix_makes_extensionless_script_executable_without_staging) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.316s
+
+OK
+test_check_reports_crlf_without_writing (test_cli.CliTests.test_check_reports_crlf_without_writing) ... ok
+test_clean_run_leaves_files_untouched_and_reports_scope (test_cli.CliTests.test_clean_run_leaves_files_untouched_and_reports_scope) ... ok
+test_fix_makes_extensionless_script_executable_without_staging (test_cli.CliTests.test_fix_makes_extensionless_script_executable_without_staging) ... ok
+test_running_from_subdirectory_checks_the_repository_root (test_cli.CliTests.test_running_from_subdirectory_checks_the_repository_root) ... FAIL
+
+======================================================================
+FAIL: test_running_from_subdirectory_checks_the_repository_root (test_cli.CliTests.test_running_from_subdirectory_checks_the_repository_root)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ubuntu/codex-worker/projects/devtool-20261009/tests/test_cli.py", line 91, in test_running_from_subdirectory_checks_the_repository_root
+    self.assertEqual(result.returncode, 1, result.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 != 1 : 
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.365s
+
+FAILED (failures=1)
+test_check_reports_crlf_without_writing (test_cli.CliTests.test_check_reports_crlf_without_writing) ... ok
+test_clean_run_leaves_files_untouched_and_reports_scope (test_cli.CliTests.test_clean_run_leaves_files_untouched_and_reports_scope) ... ok
+test_fix_makes_extensionless_script_executable_without_staging (test_cli.CliTests.test_fix_makes_extensionless_script_executable_without_staging) ... ok
+test_running_from_subdirectory_checks_the_repository_root (test_cli.CliTests.test_running_from_subdirectory_checks_the_repository_root) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.382s
+
+OK
+test_check_reports_crlf_without_writing (test_cli.CliTests.test_check_reports_crlf_without_writing) ... ok
+test_clean_run_leaves_files_untouched_and_reports_scope (test_cli.CliTests.test_clean_run_leaves_files_untouched_and_reports_scope) ... ok
+test_fix_makes_extensionless_script_executable_without_staging (test_cli.CliTests.test_fix_makes_extensionless_script_executable_without_staging) ... ok
+test_non_repository_returns_actionable_error (test_cli.CliTests.test_non_repository_returns_actionable_error) ... FAIL
+test_running_from_subdirectory_checks_the_repository_root (test_cli.CliTests.test_running_from_subdirectory_checks_the_repository_root) ... ok
+
+======================================================================
+FAIL: test_non_repository_returns_actionable_error (test_cli.CliTests.test_non_repository_returns_actionable_error)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ubuntu/codex-worker/projects/devtool-20261009/tests/test_cli.py", line 101, in test_non_repository_returns_actionable_error
+    self.assertEqual(result.returncode, 2, result.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 2 : Traceback (most recent call last):
+  File "/home/ubuntu/codex-worker/projects/devtool-20261009/shebanglf.py", line 48, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "/home/ubuntu/codex-worker/projects/devtool-20261009/shebanglf.py", line 16, in main
+    root_output = subprocess.run(
+                  ~~~~~~~~~~~~~~^
+        ["git", "-C", args.repository, "rev-parse", "--show-toplevel"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        capture_output=True, check=True,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ).stdout
+    ^
+  File "/usr/lib/python3.14/subprocess.py", line 578, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['git', '-C', '/home/ubuntu/codex-worker/projects/devtool-20261009/.test-tmp/tmpgoefyfb1/not-a-repo', 'rev-parse', '--show-toplevel']' returned non-zero exit status 128.
+
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.530s
+
+FAILED (failures=1)
+test_check_reports_crlf_without_writing (test_cli.CliTests.test_check_reports_crlf_without_writing) ... ok
+test_clean_run_leaves_files_untouched_and_reports_scope (test_cli.CliTests.test_clean_run_leaves_files_untouched_and_reports_scope) ... ok
+test_fix_makes_extensionless_script_executable_without_staging (test_cli.CliTests.test_fix_makes_extensionless_script_executable_without_staging) ... ok
+test_non_repository_returns_actionable_error (test_cli.CliTests.test_non_repository_returns_actionable_error) ... ok
+test_running_from_subdirectory_checks_the_repository_root (test_cli.CliTests.test_running_from_subdirectory_checks_the_repository_root) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.450s
+
+OK
+test_check_reports_crlf_without_writing (test_cli.CliTests.test_check_reports_crlf_without_writing) ... ok
+test_clean_run_leaves_files_untouched_and_reports_scope (test_cli.CliTests.test_clean_run_leaves_files_untouched_and_reports_scope) ... ok
+test_fix_makes_extensionless_script_executable_without_staging (test_cli.CliTests.test_fix_makes_extensionless_script_executable_without_staging) ... ok
+test_missing_git_returns_actionable_error (test_cli.CliTests.test_missing_git_returns_actionable_error) ... FAIL
+test_non_repository_returns_actionable_error (test_cli.CliTests.test_non_repository_returns_actionable_error) ... ok
+test_running_from_subdirectory_checks_the_repository_root (test_cli.CliTests.test_running_from_subdirectory_checks_the_repository_root) ... ok
+
+======================================================================
+FAIL: test_missing_git_returns_actionable_error (test_cli.CliTests.test_missing_git_returns_actionable_error)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ubuntu/codex-worker/projects/devtool-20261009/tests/test_cli.py", line 108, in test_missing_git_returns_actionable_error
+    self.assertEqual(result.returncode, 2, result.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 2 : Traceback (most recent call last):
+  File "/home/ubuntu/codex-worker/projects/devtool-20261009/shebanglf.py", line 54, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "/home/ubuntu/codex-worker/projects/devtool-20261009/shebanglf.py", line 18, in main
+    root_output = subprocess.run(
+                  ~~~~~~~~~~~~~~^
+        ["git", "-C", args.repository, "rev-parse", "--show-toplevel"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        capture_output=True, check=True,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ).stdout
+    ^
+  File "/usr/lib/python3.14/subprocess.py", line 555, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/subprocess.py", line 1039, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/subprocess.py", line 1990, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'git'
+
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.599s
+
+FAILED (failures=1)
+test_check_reports_crlf_without_writing (test_cli.CliTests.test_check_reports_crlf_without_writing) ... ok
+test_clean_run_leaves_files_untouched_and_reports_scope (test_cli.CliTests.test_clean_run_leaves_files_untouched_and_reports_scope) ... ok
+test_fix_makes_extensionless_script_executable_without_staging (test_cli.CliTests.test_fix_makes_extensionless_script_executable_without_staging) ... ok
+test_missing_git_returns_actionable_error (test_cli.CliTests.test_missing_git_returns_actionable_error) ... ok
+test_non_repository_returns_actionable_error (test_cli.CliTests.test_non_repository_returns_actionable_error) ... ok
+test_running_from_subdirectory_checks_the_repository_root (test_cli.CliTests.test_running_from_subdirectory_checks_the_repository_root) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.517s
+
+OK
+test_check_reports_crlf_without_writing (test_cli.CliTests.test_check_reports_crlf_without_writing) ... ok
+test_clean_run_leaves_files_untouched_and_reports_scope (test_cli.CliTests.test_clean_run_leaves_files_untouched_and_reports_scope) ... ok
+test_fix_makes_extensionless_script_executable_without_staging (test_cli.CliTests.test_fix_makes_extensionless_script_executable_without_staging) ... ok
+test_inherited_git_overrides_cannot_redirect_repository (test_cli.CliTests.test_inherited_git_overrides_cannot_redirect_repository) ... FAIL
+test_missing_git_returns_actionable_error (test_cli.CliTests.test_missing_git_returns_actionable_error) ... ok
+test_non_repository_returns_actionable_error (test_cli.CliTests.test_non_repository_returns_actionable_error) ... ok
+test_running_from_subdirectory_checks_the_repository_root (test_cli.CliTests.test_running_from_subdirectory_checks_the_repository_root) ... ok
+
+======================================================================
+FAIL: test_inherited_git_overrides_cannot_redirect_repository (test_cli.CliTests.test_inherited_git_overrides_cannot_redirect_repository)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ubuntu/codex-worker/projects/devtool-20261009/tests/test_cli.py", line 119, in test_inherited_git_overrides_cannot_redirect_repository
+    self.assertEqual(result.returncode, 1, result.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 2 != 1 : ERROR: Git could not read the working tree: fatal: not a git repository: '/home/ubuntu/codex-worker/projects/devtool-20261009/.test-tmp/tmp8hojdj9v/repo/missing'
+
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.585s
+
+FAILED (failures=1)
+test_check_reports_crlf_without_writing (test_cli.CliTests.test_check_reports_crlf_without_writing) ... ok
+test_clean_run_leaves_files_untouched_and_reports_scope (test_cli.CliTests.test_clean_run_leaves_files_untouched_and_reports_scope) ... ok
+test_fix_makes_extensionless_script_executable_without_staging (test_cli.CliTests.test_fix_makes_extensionless_script_executable_without_staging) ... ok
+test_inherited_git_overrides_cannot_redirect_repository (test_cli.CliTests.test_inherited_git_overrides_cannot_redirect_repository) ... ok
+test_missing_git_returns_actionable_error (test_cli.CliTests.test_missing_git_returns_actionable_error) ... ok
+test_non_repository_returns_actionable_error (test_cli.CliTests.test_non_repository_returns_actionable_error) ... ok
+test_running_from_subdirectory_checks_the_repository_root (test_cli.CliTests.test_running_from_subdirectory_checks_the_repository_root) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.608s
+
+OK
+test_check_reports_crlf_without_writing (test_cli.CliTests.test_check_reports_crlf_without_writing) ... ok
+test_clean_run_leaves_files_untouched_and_reports_scope (test_cli.CliTests.test_clean_run_leaves_files_untouched_and_reports_scope) ... ok
+test_fix_makes_extensionless_script_executable_without_staging (test_cli.CliTests.test_fix_makes_extensionless_script_executable_without_staging) ... ok
+test_inherited_git_overrides_cannot_redirect_repository (test_cli.CliTests.test_inherited_git_overrides_cannot_redirect_repository) ... ok
+test_missing_git_returns_actionable_error (test_cli.CliTests.test_missing_git_returns_actionable_error) ... ok
+test_non_repository_returns_actionable_error (test_cli.CliTests.test_non_repository_returns_actionable_error) ... ok
+test_running_from_subdirectory_checks_the_repository_root (test_cli.CliTests.test_running_from_subdirectory_checks_the_repository_root) ... ok
+test_tracked_symlink_is_skipped_without_touching_target (test_cli.CliTests.test_tracked_symlink_is_skipped_without_touching_target) ... FAIL
+
+======================================================================
+FAIL: test_tracked_symlink_is_skipped_without_touching_target (test_cli.CliTests.test_tracked_symlink_is_skipped_without_touching_target)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ubuntu/codex-worker/projects/devtool-20261009/tests/test_cli.py", line 131, in test_tracked_symlink_is_skipped_without_touching_target
+    self.assertIn('SKIP "link": symlink', result.stdout)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'SKIP "link": symlink' not found in 'FIXED "link": 2 CRLF line endings\nscripts=1 affected=1 fixed=1 skipped=0 errors=0\n'
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.699s
+
+FAILED (failures=1)
+test_check_reports_crlf_without_writing (test_cli.CliTests.test_check_reports_crlf_without_writing) ... ok
+test_clean_run_leaves_files_untouched_and_reports_scope (test_cli.CliTests.test_clean_run_leaves_files_untouched_and_reports_scope) ... ok
+test_fix_makes_extensionless_script_executable_without_staging (test_cli.CliTests.test_fix_makes_extensionless_script_executable_without_staging) ... ok
+test_inherited_git_overrides_cannot_redirect_repository (test_cli.CliTests.test_inherited_git_overrides_cannot_redirect_repository) ... ok
+test_missing_git_returns_actionable_error (test_cli.CliTests.test_missing_git_returns_actionable_error) ... ok
+test_non_repository_returns_actionable_error (test_cli.CliTests.test_non_repository_returns_actionable_error) ... ok
+test_running_from_subdirectory_checks_the_repository_root (test_cli.CliTests.test_running_from_subdirectory_checks_the_repository_root) ... ok
+test_tracked_symlink_is_skipped_without_touching_target (test_cli.CliTests.test_tracked_symlink_is_skipped_without_touching_target) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.663s
+
+OK
+test_check_reports_crlf_without_writing (test_cli.CliTests.test_check_reports_crlf_without_writing) ... ok
+test_clean_run_leaves_files_untouched_and_reports_scope (test_cli.CliTests.test_clean_run_leaves_files_untouched_and_reports_scope) ... ok
+test_fix_makes_extensionless_script_executable_without_staging (test_cli.CliTests.test_fix_makes_extensionless_script_executable_without_staging) ... ok
+test_inherited_git_overrides_cannot_redirect_repository (test_cli.CliTests.test_inherited_git_overrides_cannot_redirect_repository) ... ok
+test_missing_git_returns_actionable_error (test_cli.CliTests.test_missing_git_returns_actionable_error) ... ok
+test_non_repository_returns_actionable_error (test_cli.CliTests.test_non_repository_returns_actionable_error) ... ok
+test_running_from_subdirectory_checks_the_repository_root (test_cli.CliTests.test_running_from_subdirectory_checks_the_repository_root) ... ok
+test_submodule_is_skipped_without_reading_its_files (test_cli.CliTests.test_submodule_is_skipped_without_reading_its_files) ... FAIL
+test_tracked_symlink_is_skipped_without_touching_target (test_cli.CliTests.test_tracked_symlink_is_skipped_without_touching_target) ... ok
+
+======================================================================
+FAIL: test_submodule_is_skipped_without_reading_its_files (test_cli.CliTests.test_submodule_is_skipped_without_reading_its_files)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ubuntu/codex-worker/projects/devtool-20261009/tests/test_cli.py", line 141, in test_submodule_is_skipped_without_reading_its_files
+    self.assertEqual(result.returncode, 0, result.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 : Traceback (most recent call last):
+  File "/home/ubuntu/codex-worker/projects/devtool-20261009/shebanglf.py", line 66, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "/home/ubuntu/codex-worker/projects/devtool-20261009/shebanglf.py", line 49, in main
+    content = path.read_bytes()
+  File "/usr/lib/python3.14/pathlib/__init__.py", line 778, in read_bytes
+    with self.open(mode='rb', buffering=0) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/pathlib/__init__.py", line 772, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+IsADirectoryError: [Errno 21] Is a directory: '/home/ubuntu/codex-worker/projects/devtool-20261009/.test-tmp/tmpw00x9eya/repo/vendor'
+
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.819s
+
+FAILED (failures=1)
+test_check_reports_crlf_without_writing (test_cli.CliTests.test_check_reports_crlf_without_writing) ... ok
+test_clean_run_leaves_files_untouched_and_reports_scope (test_cli.CliTests.test_clean_run_leaves_files_untouched_and_reports_scope) ... ok
+test_fix_makes_extensionless_script_executable_without_staging (test_cli.CliTests.test_fix_makes_extensionless_script_executable_without_staging) ... ok
+test_inherited_git_overrides_cannot_redirect_repository (test_cli.CliTests.test_inherited_git_overrides_cannot_redirect_repository) ... ok
+test_missing_git_returns_actionable_error (test_cli.CliTests.test_missing_git_returns_actionable_error) ... ok
+test_non_repository_returns_actionable_error (test_cli.CliTests.test_non_repository_returns_actionable_error) ... ok
+test_running_from_subdirectory_checks_the_repository_root (test_cli.CliTests.test_running_from_subdirectory_checks_the_repository_root) ... ok
+test_submodule_is_skipped_without_reading_its_files (test_cli.CliTests.test_submodule_is_skipped_without_reading_its_files) ... ok
+test_tracked_symlink_is_skipped_without_touching_target (test_cli.CliTests.test_tracked_symlink_is_skipped_without_touching_target) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.750s
+
+OK
+test_check_reports_crlf_without_writing (test_cli.CliTests.test_check_reports_crlf_without_writing) ... ok
+test_clean_run_leaves_files_untouched_and_reports_scope (test_cli.CliTests.test_clean_run_leaves_files_untouched_and_reports_scope) ... ok
+test_fix_makes_extensionless_script_executable_without_staging (test_cli.CliTests.test_fix_makes_extensionless_script_executable_without_staging) ... ok
+test_inherited_git_overrides_cannot_redirect_repository (test_cli.CliTests.test_inherited_git_overrides_cannot_redirect_repository) ... ok
+test_missing_git_returns_actionable_error (test_cli.CliTests.test_missing_git_returns_actionable_error) ... ok
+test_non_repository_returns_actionable_error (test_cli.CliTests.test_non_repository_returns_actionable_error) ... ok
+test_running_from_subdirectory_checks_the_repository_root (test_cli.CliTests.test_running_from_subdirectory_checks_the_repository_root) ... ok
+test_submodule_is_skipped_without_reading_its_files (test_cli.CliTests.test_submodule_is_skipped_without_reading_its_files) ... ok
+test_tracked_symlink_is_skipped_without_touching_target (test_cli.CliTests.test_tracked_symlink_is_skipped_without_touching_target) ... ok
+test_working_tree_symlinks_in_any_path_component_are_refused (test_cli.CliTests.test_working_tree_symlinks_in_any_path_component_are_refused) ... FAIL
+
+======================================================================
+FAIL: test_working_tree_symlinks_in_any_path_component_are_refused (test_cli.CliTests.test_working_tree_symlinks_in_any_path_component_are_refused)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ubuntu/codex-worker/projects/devtool-20261009/tests/test_cli.py", line 160, in test_working_tree_symlinks_in_any_path_component_are_refused
+    self.assertEqual(result.returncode, 2, result.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 != 2 : 
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.834s
+
+FAILED (failures=1)
+test_check_reports_crlf_without_writing (test_cli.CliTests.test_check_reports_crlf_without_writing) ... ok
+test_clean_run_leaves_files_untouched_and_reports_scope (test_cli.CliTests.test_clean_run_leaves_files_untouched_and_reports_scope) ... ok
+test_fix_makes_extensionless_script_executable_without_staging (test_cli.CliTests.test_fix_makes_extensionless_script_executable_without_staging) ... ok
+test_inherited_git_overrides_cannot_redirect_repository (test_cli.CliTests.test_inherited_git_overrides_cannot_redirect_repository) ... ok
+test_missing_git_returns_actionable_error (test_cli.CliTests.test_missing_git_returns_actionable_error) ... ok
+test_non_repository_returns_actionable_error (test_cli.CliTests.test_non_repository_returns_actionable_error) ... ok
+test_running_from_subdirectory_checks_the_repository_root (test_cli.CliTests.test_running_from_subdirectory_checks_the_repository_root) ... ok
+test_submodule_is_skipped_without_reading_its_files (test_cli.CliTests.test_submodule_is_skipped_without_reading_its_files) ... ok
+test_tracked_symlink_is_skipped_without_touching_target (test_cli.CliTests.test_tracked_symlink_is_skipped_without_touching_target) ... ok
+test_working_tree_symlinks_in_any_path_component_are_refused (test_cli.CliTests.test_working_tree_symlinks_in_any_path_component_are_refused) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.816s
+
+OK
+test_check_reports_crlf_without_writing (test_cli.CliTests.test_check_reports_crlf_without_writing) ... ok
+test_clean_run_leaves_files_untouched_and_reports_scope (test_cli.CliTests.test_clean_run_leaves_files_untouched_and_reports_scope) ... ok
+test_fix_makes_extensionless_script_executable_without_staging (test_cli.CliTests.test_fix_makes_extensionless_script_executable_without_staging) ... ok
+test_inherited_git_overrides_cannot_redirect_repository (test_cli.CliTests.test_inherited_git_overrides_cannot_redirect_repository) ... ok
+test_missing_git_returns_actionable_error (test_cli.CliTests.test_missing_git_returns_actionable_error) ... ok
+test_missing_unreadable_and_nonregular_entries_report_errors_and_continue (test_cli.CliTests.test_missing_unreadable_and_nonregular_entries_report_errors_and_continue) ... FAIL
+test_non_repository_returns_actionable_error (test_cli.CliTests.test_non_repository_returns_actionable_error) ... ok
+test_running_from_subdirectory_checks_the_repository_root (test_cli.CliTests.test_running_from_subdirectory_checks_the_repository_root) ... ok
+test_submodule_is_skipped_without_reading_its_files (test_cli.CliTests.test_submodule_is_skipped_without_reading_its_files) ... ok
+test_tracked_symlink_is_skipped_without_touching_target (test_cli.CliTests.test_tracked_symlink_is_skipped_without_touching_target) ... ok
+test_working_tree_symlinks_in_any_path_component_are_refused (test_cli.CliTests.test_working_tree_symlinks_in_any_path_component_are_refused) ... ok
+
+======================================================================
+FAIL: test_missing_unreadable_and_nonregular_entries_report_errors_and_continue (test_cli.CliTests.test_missing_unreadable_and_nonregular_entries_report_errors_and_continue)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ubuntu/codex-worker/projects/devtool-20261009/tests/test_cli.py", line 150, in test_missing_unreadable_and_nonregular_entries_report_errors_and_continue
+    self.assertEqual(result.returncode, 2, result.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 2 : Traceback (most recent call last):
+  File "/home/ubuntu/codex-worker/projects/devtool-20261009/shebanglf.py", line 73, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "/home/ubuntu/codex-worker/projects/devtool-20261009/shebanglf.py", line 54, in main
+    content = path.read_bytes()
+  File "/usr/lib/python3.14/pathlib/__init__.py", line 778, in read_bytes
+    with self.open(mode='rb', buffering=0) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/pathlib/__init__.py", line 772, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/ubuntu/codex-worker/projects/devtool-20261009/.test-tmp/tmpjp7kkzq5/repo/a-missing'
+
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.970s
+
+FAILED (failures=1)
+test_check_reports_crlf_without_writing (test_cli.CliTests.test_check_reports_crlf_without_writing) ... ok
+test_clean_run_leaves_files_untouched_and_reports_scope (test_cli.CliTests.test_clean_run_leaves_files_untouched_and_reports_scope) ... ok
+test_fix_makes_extensionless_script_executable_without_staging (test_cli.CliTests.test_fix_makes_extensionless_script_executable_without_staging) ... ok
+test_inherited_git_overrides_cannot_redirect_repository (test_cli.CliTests.test_inherited_git_overrides_cannot_redirect_repository) ... ok
+test_missing_git_returns_actionable_error (test_cli.CliTests.test_missing_git_returns_actionable_error) ... ok
+test_missing_unreadable_and_nonregular_entries_report_errors_and_continue (test_cli.CliTests.test_missing_unreadable_and_nonregular_entries_report_errors_and_continue) ... ok
+test_non_repository_returns_actionable_error (test_cli.CliTests.test_non_repository_returns_actionable_error) ... ok
+test_running_from_subdirectory_checks_the_repository_root (test_cli.CliTests.test_running_from_subdirectory_checks_the_repository_root) ... ok
+test_submodule_is_skipped_without_reading_its_files (test_cli.CliTests.test_submodule_is_skipped_without_reading_its_files) ... ok
+test_tracked_symlink_is_skipped_without_touching_target (test_cli.CliTests.test_tracked_symlink_is_skipped_without_touching_target) ... ok
+test_working_tree_symlinks_in_any_path_component_are_refused (test_cli.CliTests.test_working_tree_symlinks_in_any_path_component_are_refused) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.907s
+
+OK
+test_check_reports_crlf_without_writing (test_cli.CliTests.test_check_reports_crlf_without_writing) ... ok
+test_clean_run_leaves_files_untouched_and_reports_scope (test_cli.CliTests.test_clean_run_leaves_files_untouched_and_reports_scope) ... ok
+test_fix_makes_extensionless_script_executable_without_staging (test_cli.CliTests.test_fix_makes_extensionless_script_executable_without_staging) ... ok
+test_inherited_git_overrides_cannot_redirect_repository (test_cli.CliTests.test_inherited_git_overrides_cannot_redirect_repository) ... ok
+test_missing_git_returns_actionable_error (test_cli.CliTests.test_missing_git_returns_actionable_error) ... ok
+test_missing_unreadable_and_nonregular_entries_report_errors_and_continue (test_cli.CliTests.test_missing_unreadable_and_nonregular_entries_report_errors_and_continue) ... ok
+test_non_repository_returns_actionable_error (test_cli.CliTests.test_non_repository_returns_actionable_error) ... ok
+test_nontext_shebang_files_are_refused_without_conversion (test_cli.CliTests.test_nontext_shebang_files_are_refused_without_conversion) ... FAIL
+test_running_from_subdirectory_checks_the_repository_root (test_cli.CliTests.test_running_from_subdirectory_checks_the_repository_root) ... ok
+test_submodule_is_skipped_without_reading_its_files (test_cli.CliTests.test_submodule_is_skipped_without_reading_its_files) ... ok
+test_tracked_symlink_is_skipped_without_touching_target (test_cli.CliTests.test_tracked_symlink_is_skipped_without_touching_target) ... ok
+test_working_tree_symlinks_in_any_path_component_are_refused (test_cli.CliTests.test_working_tree_symlinks_in_any_path_component_are_refused) ... ok
+
+======================================================================
+FAIL: test_nontext_shebang_files_are_refused_without_conversion (test_cli.CliTests.test_nontext_shebang_files_are_refused_without_conversion)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ubuntu/codex-worker/projects/devtool-20261009/tests/test_cli.py", line 197, in test_nontext_shebang_files_are_refused_without_conversion
+    self.assertEqual(result.returncode, 2, result.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 2 : 
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.998s
+
+FAILED (failures=1)
+test_check_reports_crlf_without_writing (test_cli.CliTests.test_check_reports_crlf_without_writing) ... ok
+test_clean_run_leaves_files_untouched_and_reports_scope (test_cli.CliTests.test_clean_run_leaves_files_untouched_and_reports_scope) ... ok
+test_fix_makes_extensionless_script_executable_without_staging (test_cli.CliTests.test_fix_makes_extensionless_script_executable_without_staging) ... ok
+test_inherited_git_overrides_cannot_redirect_repository (test_cli.CliTests.test_inherited_git_overrides_cannot_redirect_repository) ... ok
+test_missing_git_returns_actionable_error (test_cli.CliTests.test_missing_git_returns_actionable_error) ... ok
+test_missing_unreadable_and_nonregular_entries_report_errors_and_continue (test_cli.CliTests.test_missing_unreadable_and_nonregular_entries_report_errors_and_continue) ... ok
+test_non_repository_returns_actionable_error (test_cli.CliTests.test_non_repository_returns_actionable_error) ... ok
+test_nontext_shebang_files_are_refused_without_conversion (test_cli.CliTests.test_nontext_shebang_files_are_refused_without_conversion) ... ok
+test_running_from_subdirectory_checks_the_repository_root (test_cli.CliTests.test_running_from_subdirectory_checks_the_repository_root) ... ok
+test_submodule_is_skipped_without_reading_its_files (test_cli.CliTests.test_submodule_is_skipped_without_reading_its_files) ... ok
+test_tracked_symlink_is_skipped_without_touching_target (test_cli.CliTests.test_tracked_symlink_is_skipped_without_touching_target) ... ok
+test_working_tree_symlinks_in_any_path_component_are_refused (test_cli.CliTests.test_working_tree_symlinks_in_any_path_component_are_refused) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 1.081s
+
+OK
+test_check_reports_crlf_without_writing (test_cli.CliTests.test_check_reports_crlf_without_writing) ... ok
+test_clean_run_leaves_files_untouched_and_reports_scope (test_cli.CliTests.test_clean_run_leaves_files_untouched_and_reports_scope) ... ok
+test_fix_makes_extensionless_script_executable_without_staging (test_cli.CliTests.test_fix_makes_extensionless_script_executable_without_staging) ... ok
+test_inherited_git_overrides_cannot_redirect_repository (test_cli.CliTests.test_inherited_git_overrides_cannot_redirect_repository) ... ok
+test_missing_git_returns_actionable_error (test_cli.CliTests.test_missing_git_returns_actionable_error) ... ok
+test_missing_unreadable_and_nonregular_entries_report_errors_and_continue (test_cli.CliTests.test_missing_unreadable_and_nonregular_entries_report_errors_and_continue) ... ok
+test_non_repository_returns_actionable_error (test_cli.CliTests.test_non_repository_returns_actionable_error) ... ok
+test_nontext_shebang_files_are_refused_without_conversion (test_cli.CliTests.test_nontext_shebang_files_are_refused_without_conversion) ... ok
+test_running_from_subdirectory_checks_the_repository_root (test_cli.CliTests.test_running_from_subdirectory_checks_the_repository_root) ... ok
+test_submodule_is_skipped_without_reading_its_files (test_cli.CliTests.test_submodule_is_skipped_without_reading_its_files) ... ok
+test_tracked_symlink_is_skipped_without_touching_target (test_cli.CliTests.test_tracked_symlink_is_skipped_without_touching_target) ... ok
+test_unusual_filename_and_mixed_endings_are_handled_byte_faithfully (test_cli.CliTests.test_unusual_filename_and_mixed_endings_are_handled_byte_faithfully) ... FAIL
+test_working_tree_symlinks_in_any_path_component_are_refused (test_cli.CliTests.test_working_tree_symlinks_in_any_path_component_are_refused) ... ok
+
+======================================================================
+FAIL: test_unusual_filename_and_mixed_endings_are_handled_byte_faithfully (test_cli.CliTests.test_unusual_filename_and_mixed_endings_are_handled_byte_faithfully)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ubuntu/codex-worker/projects/devtool-20261009/tests/test_cli.py", line 210, in test_unusual_filename_and_mixed_endings_are_handled_byte_faithfully
+    self.assertEqual(result.returncode, 0, result.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 : Traceback (most recent call last):
+  File "/home/ubuntu/codex-worker/projects/devtool-20261009/shebanglf.py", line 92, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "/home/ubuntu/codex-worker/projects/devtool-20261009/shebanglf.py", line 44, in main
+    relative = name.decode()
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 32: invalid start byte
+
+
+----------------------------------------------------------------------
+Ran 13 tests in 1.210s
+
+FAILED (failures=1)
+test_check_reports_crlf_without_writing (test_cli.CliTests.test_check_reports_crlf_without_writing) ... ok
+test_clean_run_leaves_files_untouched_and_reports_scope (test_cli.CliTests.test_clean_run_leaves_files_untouched_and_reports_scope) ... ok
+test_fix_makes_extensionless_script_executable_without_staging (test_cli.CliTests.test_fix_makes_extensionless_script_executable_without_staging) ... ok
+test_inherited_git_overrides_cannot_redirect_repository (test_cli.CliTests.test_inherited_git_overrides_cannot_redirect_repository) ... ok
+test_missing_git_returns_actionable_error (test_cli.CliTests.test_missing_git_returns_actionable_error) ... ok
+test_missing_unreadable_and_nonregular_entries_report_errors_and_continue (test_cli.CliTests.test_missing_unreadable_and_nonregular_entries_report_errors_and_continue) ... ok
+test_non_repository_returns_actionable_error (test_cli.CliTests.test_non_repository_returns_actionable_error) ... ok
+test_nontext_shebang_files_are_refused_without_conversion (test_cli.CliTests.test_nontext_shebang_files_are_refused_without_conversion) ... ok
+test_running_from_subdirectory_checks_the_repository_root (test_cli.CliTests.test_running_from_subdirectory_checks_the_repository_root) ... ok
+test_submodule_is_skipped_without_reading_its_files (test_cli.CliTests.test_submodule_is_skipped_without_reading_its_files) ... ok
+test_tracked_symlink_is_skipped_without_touching_target (test_cli.CliTests.test_tracked_symlink_is_skipped_without_touching_target) ... ok
+test_unusual_filename_and_mixed_endings_are_handled_byte_faithfully (test_cli.CliTests.test_unusual_filename_and_mixed_endings_are_handled_byte_faithfully) ... ok
+test_working_tree_symlinks_in_any_path_component_are_refused (test_cli.CliTests.test_working_tree_symlinks_in_any_path_component_are_refused) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 1.239s
+
+OK
+test_check_reports_crlf_without_writing (test_cli.CliTests.test_check_reports_crlf_without_writing) ... ok
+test_clean_run_leaves_files_untouched_and_reports_scope (test_cli.CliTests.test_clean_run_leaves_files_untouched_and_reports_scope) ... ok
+test_fix_makes_extensionless_script_executable_without_staging (test_cli.CliTests.test_fix_makes_extensionless_script_executable_without_staging) ... ok
+test_fix_refuses_hard_links (test_cli.CliTests.test_fix_refuses_hard_links) ... FAIL
+test_inherited_git_overrides_cannot_redirect_repository (test_cli.CliTests.test_inherited_git_overrides_cannot_redirect_repository) ... ok
+test_missing_git_returns_actionable_error (test_cli.CliTests.test_missing_git_returns_actionable_error) ... ok
+test_missing_unreadable_and_nonregular_entries_report_errors_and_continue (test_cli.CliTests.test_missing_unreadable_and_nonregular_entries_report_errors_and_continue) ... ok
+test_non_repository_returns_actionable_error (test_cli.CliTests.test_non_repository_returns_actionable_error) ... ok
+test_nontext_shebang_files_are_refused_without_conversion (test_cli.CliTests.test_nontext_shebang_files_are_refused_without_conversion) ... ok
+test_running_from_subdirectory_checks_the_repository_root (test_cli.CliTests.test_running_from_subdirectory_checks_the_repository_root) ... ok
+test_submodule_is_skipped_without_reading_its_files (test_cli.CliTests.test_submodule_is_skipped_without_reading_its_files) ... ok
+test_tracked_symlink_is_skipped_without_touching_target (test_cli.CliTests.test_tracked_symlink_is_skipped_without_touching_target) ... ok
+test_unusual_filename_and_mixed_endings_are_handled_byte_faithfully (test_cli.CliTests.test_unusual_filename_and_mixed_endings_are_handled_byte_faithfully) ... ok
+test_working_tree_symlinks_in_any_path_component_are_refused (test_cli.CliTests.test_working_tree_symlinks_in_any_path_component_are_refused) ... ok
+
+======================================================================
+FAIL: test_fix_refuses_hard_links (test_cli.CliTests.test_fix_refuses_hard_links)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ubuntu/codex-worker/projects/devtool-20261009/tests/test_cli.py", line 226, in test_fix_refuses_hard_links
+    self.assertEqual(result.returncode, 2, result.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 != 2 : 
+
+----------------------------------------------------------------------
+Ran 14 tests in 1.279s
+
+FAILED (failures=1)
+test_check_reports_crlf_without_writing (test_cli.CliTests.test_check_reports_crlf_without_writing) ... ok
+test_clean_run_leaves_files_untouched_and_reports_scope (test_cli.CliTests.test_clean_run_leaves_files_untouched_and_reports_scope) ... ok
+test_fix_makes_extensionless_script_executable_without_staging (test_cli.CliTests.test_fix_makes_extensionless_script_executable_without_staging) ... ok
+test_fix_refuses_hard_links (test_cli.CliTests.test_fix_refuses_hard_links) ... ok
+test_inherited_git_overrides_cannot_redirect_repository (test_cli.CliTests.test_inherited_git_overrides_cannot_redirect_repository) ... ok
+test_missing_git_returns_actionable_error (test_cli.CliTests.test_missing_git_returns_actionable_error) ... ok
+test_missing_unreadable_and_nonregular_entries_report_errors_and_continue (test_cli.CliTests.test_missing_unreadable_and_nonregular_entries_report_errors_and_continue) ... ok
+test_non_repository_returns_actionable_error (test_cli.CliTests.test_non_repository_returns_actionable_error) ... ok
+test_nontext_shebang_files_are_refused_without_conversion (test_cli.CliTests.test_nontext_shebang_files_are_refused_without_conversion) ... ok
+test_running_from_subdirectory_checks_the_repository_root (test_cli.CliTests.test_running_from_subdirectory_checks_the_repository_root) ... ok
+test_submodule_is_skipped_without_reading_its_files (test_cli.CliTests.test_submodule_is_skipped_without_reading_its_files) ... ok
+test_tracked_symlink_is_skipped_without_touching_target (test_cli.CliTests.test_tracked_symlink_is_skipped_without_touching_target) ... ok
+test_unusual_filename_and_mixed_endings_are_handled_byte_faithfully (test_cli.CliTests.test_unusual_filename_and_mixed_endings_are_handled_byte_faithfully) ... ok
+test_working_tree_symlinks_in_any_path_component_are_refused (test_cli.CliTests.test_working_tree_symlinks_in_any_path_component_are_refused) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 1.305s
+
+OK
+test_check_reports_crlf_without_writing (test_cli.CliTests.test_check_reports_crlf_without_writing) ... ok
+test_clean_run_leaves_files_untouched_and_reports_scope (test_cli.CliTests.test_clean_run_leaves_files_untouched_and_reports_scope) ... ok
+test_fix_makes_extensionless_script_executable_without_staging (test_cli.CliTests.test_fix_makes_extensionless_script_executable_without_staging) ... ok
+test_fix_refuses_hard_links (test_cli.CliTests.test_fix_refuses_hard_links) ... ok
+test_inherited_git_overrides_cannot_redirect_repository (test_cli.CliTests.test_inherited_git_overrides_cannot_redirect_repository) ... ok
+test_missing_git_returns_actionable_error (test_cli.CliTests.test_missing_git_returns_actionable_error) ... ok
+test_missing_unreadable_and_nonregular_entries_report_errors_and_continue (test_cli.CliTests.test_missing_unreadable_and_nonregular_entries_report_errors_and_continue) ... ok
+test_non_repository_returns_actionable_error (test_cli.CliTests.test_non_repository_returns_actionable_error) ... ok
+test_nontext_shebang_files_are_refused_without_conversion (test_cli.CliTests.test_nontext_shebang_files_are_refused_without_conversion) ... ok
+test_running_from_subdirectory_checks_the_repository_root (test_cli.CliTests.test_running_from_subdirectory_checks_the_repository_root) ... ok
+test_submodule_is_skipped_without_reading_its_files (test_cli.CliTests.test_submodule_is_skipped_without_reading_its_files) ... ok
+test_tracked_symlink_is_skipped_without_touching_target (test_cli.CliTests.test_tracked_symlink_is_skipped_without_touching_target) ... ok
+test_unmerged_index_entry_is_reported_once_and_not_modified (test_cli.CliTests.test_unmerged_index_entry_is_reported_once_and_not_modified) ... FAIL
+test_unusual_filename_and_mixed_endings_are_handled_byte_faithfully (test_cli.CliTests.test_unusual_filename_and_mixed_endings_are_handled_byte_faithfully) ... ok
+test_working_tree_symlinks_in_any_path_component_are_refused (test_cli.CliTests.test_working_tree_symlinks_in_any_path_component_are_refused) ... ok
+
+======================================================================
+FAIL: test_unmerged_index_entry_is_reported_once_and_not_modified (test_cli.CliTests.test_unmerged_index_entry_is_reported_once_and_not_modified)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ubuntu/codex-worker/projects/devtool-20261009/tests/test_cli.py", line 240, in test_unmerged_index_entry_is_reported_once_and_not_modified
+    self.assertEqual(result.returncode, 2, result.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 != 2 : 
+
+----------------------------------------------------------------------
+Ran 15 tests in 1.386s
+
+FAILED (failures=1)
+test_check_reports_crlf_without_writing (test_cli.CliTests.test_check_reports_crlf_without_writing) ... ok
+test_clean_run_leaves_files_untouched_and_reports_scope (test_cli.CliTests.test_clean_run_leaves_files_untouched_and_reports_scope) ... ok
+test_fix_makes_extensionless_script_executable_without_staging (test_cli.CliTests.test_fix_makes_extensionless_script_executable_without_staging) ... ok
+test_fix_refuses_hard_links (test_cli.CliTests.test_fix_refuses_hard_links) ... ok
+test_inherited_git_overrides_cannot_redirect_repository (test_cli.CliTests.test_inherited_git_overrides_cannot_redirect_repository) ... ok
+test_missing_git_returns_actionable_error (test_cli.CliTests.test_missing_git_returns_actionable_error) ... ok
+test_missing_unreadable_and_nonregular_entries_report_errors_and_continue (test_cli.CliTests.test_missing_unreadable_and_nonregular_entries_report_errors_and_continue) ... ok
+test_non_repository_returns_actionable_error (test_cli.CliTests.test_non_repository_returns_actionable_error) ... ok
+test_nontext_shebang_files_are_refused_without_conversion (test_cli.CliTests.test_nontext_shebang_files_are_refused_without_conversion) ... ok
+test_running_from_subdirectory_checks_the_repository_root (test_cli.CliTests.test_running_from_subdirectory_checks_the_repository_root) ... ok
+test_submodule_is_skipped_without_reading_its_files (test_cli.CliTests.test_submodule_is_skipped_without_reading_its_files) ... ok
+test_tracked_symlink_is_skipped_without_touching_target (test_cli.CliTests.test_tracked_symlink_is_skipped_without_touching_target) ... ok
+test_unmerged_index_entry_is_reported_once_and_not_modified (test_cli.CliTests.test_unmerged_index_entry_is_reported_once_and_not_modified) ... ok
+test_unusual_filename_and_mixed_endings_are_handled_byte_faithfully (test_cli.CliTests.test_unusual_filename_and_mixed_endings_are_handled_byte_faithfully) ... ok
+test_working_tree_symlinks_in_any_path_component_are_refused (test_cli.CliTests.test_working_tree_symlinks_in_any_path_component_are_refused) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 1.387s
+
+OK
+test_check_reports_crlf_without_writing (test_cli.CliTests.test_check_reports_crlf_without_writing) ... ok
+test_clean_run_leaves_files_untouched_and_reports_scope (test_cli.CliTests.test_clean_run_leaves_files_untouched_and_reports_scope) ... ok
+test_fix_makes_extensionless_script_executable_without_staging (test_cli.CliTests.test_fix_makes_extensionless_script_executable_without_staging) ... ok
+test_fix_refuses_hard_links (test_cli.CliTests.test_fix_refuses_hard_links) ... ok
+test_inherited_git_overrides_cannot_redirect_repository (test_cli.CliTests.test_inherited_git_overrides_cannot_redirect_repository) ... ok
+test_interrupted_write_keeps_original_and_cleans_temporary_files (test_cli.CliTests.test_interrupted_write_keeps_original_and_cleans_temporary_files) ... FAIL
+test_missing_git_returns_actionable_error (test_cli.CliTests.test_missing_git_returns_actionable_error) ... ok
+test_missing_unreadable_and_nonregular_entries_report_errors_and_continue (test_cli.CliTests.test_missing_unreadable_and_nonregular_entries_report_errors_and_continue) ... ok
+test_non_repository_returns_actionable_error (test_cli.CliTests.test_non_repository_returns_actionable_error) ... ok
+test_nontext_shebang_files_are_refused_without_conversion (test_cli.CliTests.test_nontext_shebang_files_are_refused_without_conversion) ... ok
+test_running_from_subdirectory_checks_the_repository_root (test_cli.CliTests.test_running_from_subdirectory_checks_the_repository_root) ... ok
+test_submodule_is_skipped_without_reading_its_files (test_cli.CliTests.test_submodule_is_skipped_without_reading_its_files) ... ok
+test_tracked_symlink_is_skipped_without_touching_target (test_cli.CliTests.test_tracked_symlink_is_skipped_without_touching_target) ... ok
+test_unmerged_index_entry_is_reported_once_and_not_modified (test_cli.CliTests.test_unmerged_index_entry_is_reported_once_and_not_modified) ... ok
+test_unusual_filename_and_mixed_endings_are_handled_byte_faithfully (test_cli.CliTests.test_unusual_filename_and_mixed_endings_are_handled_byte_faithfully) ... ok
+test_working_tree_symlinks_in_any_path_component_are_refused (test_cli.CliTests.test_working_tree_symlinks_in_any_path_component_are_refused) ... ok
+
+======================================================================
+FAIL: test_interrupted_write_keeps_original_and_cleans_temporary_files (test_cli.CliTests.test_interrupted_write_keeps_original_and_cleans_temporary_files)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ubuntu/codex-worker/projects/devtool-20261009/tests/test_cli.py", line 256, in test_interrupted_write_keeps_original_and_cleans_temporary_files
+    self.assertEqual(script.read_bytes(), original)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: b'#!/bin/sh\n# some data\n# some data\n# some data\n#[83 chars] dat' != b'#!/bin/sh\r\n# some data\r\n# some data\r\n# some d[1458 chars]\r\n'
+
+----------------------------------------------------------------------
+Ran 16 tests in 1.507s
+
+FAILED (failures=1)
+test_check_reports_crlf_without_writing (test_cli.CliTests.test_check_reports_crlf_without_writing) ... ok
+test_clean_run_leaves_files_untouched_and_reports_scope (test_cli.CliTests.test_clean_run_leaves_files_untouched_and_reports_scope) ... ok
+test_fix_makes_extensionless_script_executable_without_staging (test_cli.CliTests.test_fix_makes_extensionless_script_executable_without_staging) ... ok
+test_fix_refuses_hard_links (test_cli.CliTests.test_fix_refuses_hard_links) ... ok
+test_inherited_git_overrides_cannot_redirect_repository (test_cli.CliTests.test_inherited_git_overrides_cannot_redirect_repository) ... ok
+test_interrupted_write_keeps_original_and_cleans_temporary_files (test_cli.CliTests.test_interrupted_write_keeps_original_and_cleans_temporary_files) ... ok
+test_missing_git_returns_actionable_error (test_cli.CliTests.test_missing_git_returns_actionable_error) ... ok
+test_missing_unreadable_and_nonregular_entries_report_errors_and_continue (test_cli.CliTests.test_missing_unreadable_and_nonregular_entries_report_errors_and_continue) ... ok
+test_non_repository_returns_actionable_error (test_cli.CliTests.test_non_repository_returns_actionable_error) ... ok
+test_nontext_shebang_files_are_refused_without_conversion (test_cli.CliTests.test_nontext_shebang_files_are_refused_without_conversion) ... ok
+test_running_from_subdirectory_checks_the_repository_root (test_cli.CliTests.test_running_from_subdirectory_checks_the_repository_root) ... ok
+test_submodule_is_skipped_without_reading_its_files (test_cli.CliTests.test_submodule_is_skipped_without_reading_its_files) ... ok
+test_tracked_symlink_is_skipped_without_touching_target (test_cli.CliTests.test_tracked_symlink_is_skipped_without_touching_target) ... ok
+test_unmerged_index_entry_is_reported_once_and_not_modified (test_cli.CliTests.test_unmerged_index_entry_is_reported_once_and_not_modified) ... ok
+test_unusual_filename_and_mixed_endings_are_handled_byte_faithfully (test_cli.CliTests.test_unusual_filename_and_mixed_endings_are_handled_byte_faithfully) ... ok
+test_working_tree_symlinks_in_any_path_component_are_refused (test_cli.CliTests.test_working_tree_symlinks_in_any_path_component_are_refused) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 1.512s
+
+OK
+test_check_reports_crlf_without_writing (test_cli.CliTests.test_check_reports_crlf_without_writing) ... ok
+test_clean_run_leaves_files_untouched_and_reports_scope (test_cli.CliTests.test_clean_run_leaves_files_untouched_and_reports_scope) ... ok
+test_fix_makes_extensionless_script_executable_without_staging (test_cli.CliTests.test_fix_makes_extensionless_script_executable_without_staging) ... ok
+test_fix_refuses_hard_links (test_cli.CliTests.test_fix_refuses_hard_links) ... ok
+test_inherited_git_overrides_cannot_redirect_repository (test_cli.CliTests.test_inherited_git_overrides_cannot_redirect_repository) ... ok
+test_interrupted_write_keeps_original_and_cleans_temporary_files (test_cli.CliTests.test_interrupted_write_keeps_original_and_cleans_temporary_files) ... ok
+test_missing_git_returns_actionable_error (test_cli.CliTests.test_missing_git_returns_actionable_error) ... ok
+test_missing_unreadable_and_nonregular_entries_report_errors_and_continue (test_cli.CliTests.test_missing_unreadable_and_nonregular_entries_report_errors_and_continue) ... ok
+test_non_repository_returns_actionable_error (test_cli.CliTests.test_non_repository_returns_actionable_error) ... ok
+test_nontext_shebang_files_are_refused_without_conversion (test_cli.CliTests.test_nontext_shebang_files_are_refused_without_conversion) ... ok
+test_readonly_files_and_directories_leave_originals_untouched (test_cli.CliTests.test_readonly_files_and_directories_leave_originals_untouched) ... FAIL
+test_running_from_subdirectory_checks_the_repository_root (test_cli.CliTests.test_running_from_subdirectory_checks_the_repository_root) ... ok
+test_submodule_is_skipped_without_reading_its_files (test_cli.CliTests.test_submodule_is_skipped_without_reading_its_files) ... ok
+test_tracked_symlink_is_skipped_without_touching_target (test_cli.CliTests.test_tracked_symlink_is_skipped_without_touching_target) ... ok
+test_unmerged_index_entry_is_reported_once_and_not_modified (test_cli.CliTests.test_unmerged_index_entry_is_reported_once_and_not_modified) ... ok
+test_unusual_filename_and_mixed_endings_are_handled_byte_faithfully (test_cli.CliTests.test_unusual_filename_and_mixed_endings_are_handled_byte_faithfully) ... ok
+test_working_tree_symlinks_in_any_path_component_are_refused (test_cli.CliTests.test_working_tree_symlinks_in_any_path_component_are_refused) ... ok
+
+======================================================================
+FAIL: test_readonly_files_and_directories_leave_originals_untouched (test_cli.CliTests.test_readonly_files_and_directories_leave_originals_untouched)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ubuntu/codex-worker/projects/devtool-20261009/tests/test_cli.py", line 271, in test_readonly_files_and_directories_leave_originals_untouched
+    self.assertIn('ERROR "readonly"', result.stderr)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'ERROR "readonly"' not found in 'ERROR "locked/run": Permission denied\n'
+
+----------------------------------------------------------------------
+Ran 17 tests in 1.595s
+
+FAILED (failures=1)
+test_check_reports_crlf_without_writing (test_cli.CliTests.test_check_reports_crlf_without_writing) ... ok
+test_clean_run_leaves_files_untouched_and_reports_scope (test_cli.CliTests.test_clean_run_leaves_files_untouched_and_reports_scope) ... ok
+test_fix_makes_extensionless_script_executable_without_staging (test_cli.CliTests.test_fix_makes_extensionless_script_executable_without_staging) ... ok
+test_fix_refuses_hard_links (test_cli.CliTests.test_fix_refuses_hard_links) ... ok
+test_inherited_git_overrides_cannot_redirect_repository (test_cli.CliTests.test_inherited_git_overrides_cannot_redirect_repository) ... ok
+test_interrupted_write_keeps_original_and_cleans_temporary_files (test_cli.CliTests.test_interrupted_write_keeps_original_and_cleans_temporary_files) ... ok
+test_missing_git_returns_actionable_error (test_cli.CliTests.test_missing_git_returns_actionable_error) ... ok
+test_missing_unreadable_and_nonregular_entries_report_errors_and_continue (test_cli.CliTests.test_missing_unreadable_and_nonregular_entries_report_errors_and_continue) ... ok
+test_non_repository_returns_actionable_error (test_cli.CliTests.test_non_repository_returns_actionable_error) ... ok
+test_nontext_shebang_files_are_refused_without_conversion (test_cli.CliTests.test_nontext_shebang_files_are_refused_without_conversion) ... ok
+test_readonly_files_and_directories_leave_originals_untouched (test_cli.CliTests.test_readonly_files_and_directories_leave_originals_untouched) ... ok
+test_running_from_subdirectory_checks_the_repository_root (test_cli.CliTests.test_running_from_subdirectory_checks_the_repository_root) ... ok
+test_submodule_is_skipped_without_reading_its_files (test_cli.CliTests.test_submodule_is_skipped_without_reading_its_files) ... ok
+test_tracked_symlink_is_skipped_without_touching_target (test_cli.CliTests.test_tracked_symlink_is_skipped_without_touching_target) ... ok
+test_unmerged_index_entry_is_reported_once_and_not_modified (test_cli.CliTests.test_unmerged_index_entry_is_reported_once_and_not_modified) ... ok
+test_unusual_filename_and_mixed_endings_are_handled_byte_faithfully (test_cli.CliTests.test_unusual_filename_and_mixed_endings_are_handled_byte_faithfully) ... ok
+test_working_tree_symlinks_in_any_path_component_are_refused (test_cli.CliTests.test_working_tree_symlinks_in_any_path_component_are_refused) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 1.596s
+
+OK
